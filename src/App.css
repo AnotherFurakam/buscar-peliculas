@@ -1,0 +1,93 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.error-popup {
+  position: absolute;
+  background-color: #f74242;
+  display: flex;
+  text-align: center;
+  padding: 9px;
+  border-radius: 10px;
+  top: 35px;
+  font-size: 13px;
+  width: 100%;
+  opacity: .95;
+  z-index: 40;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .9);
+}
+
+.movies {
+  list-style: none;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0;
+}
+
+.movie {
+  position: relative;
+  cursor: pointer;
+}
+
+.movie .title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  bottom: 0;
+  z-index: 20;
+  margin: 0;
+  border-radius: 10px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.movie .title-container h3{
+  text-align: center;
+  font-weight: 400;
+  padding: 0 5px;
+}
+
+.movie .title-container:hover {
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+
+.movie img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
